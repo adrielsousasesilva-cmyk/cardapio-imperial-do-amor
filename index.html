@@ -83,6 +83,8 @@
   }
   .dish p{font-size:18px;font-style:italic;color:var(--ivory-dim);margin-top:8px;line-height:1.45}
 
+  .dish p.pairing{font-family:var(--sans);font-style:normal;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:18px}
+  .dish p{max-width:360px;margin-left:auto;margin-right:auto}
   /* guarnições lado a lado */
   .pair{display:grid;grid-template-columns:1fr 1fr;gap:22px}
   .pair .photo{width:100%;box-shadow:0 0 0 1px var(--gold-line), 0 0 0 6px var(--bg), 0 0 0 7px var(--gold-line), 0 24px 40px -20px rgba(0,0,0,.85)}
@@ -132,21 +134,22 @@
     <div class="label">Entrada</div>
     <div class="photo"><img src="img/bruschetta.jpg" alt="Bruschetta tostada com muçarela derretida"></div>
     <h2>Bruschetta de Calabresa</h2>
-    <p>Baguete tostada no azeite, calabresa douradinha, muçarela derretida e orégano.</p>
+    <p>Fatias de baguete tostadas no azeite, cobertas com calabresa douradinha e muçarela derretida, finalizadas com orégano.</p>
   </section>
 
   <section class="dish reveal">
     <div class="label">Prato principal</div>
     <div class="photo"><img src="img/lombo.jpg" alt="Lombo suíno dourado e fatiado" loading="lazy"></div>
     <h2>Lombo Suíno</h2>
-    <p>Dourado na frigideira, suculento por dentro.</p>
+    <p>Lombo suíno temperado, selado na manteiga e no azeite até ficar douradinho por fora e suculento por dentro, finalizado com salsinha fresca.</p>
+    <p class="pairing">Servido com risoto de parmesão &amp; Gouda</p>
   </section>
 
   <section class="dish reveal">
     <div class="label">Acompanhamento</div>
     <div class="photo"><img src="img/risoto.jpg" alt="Risoto cremoso de queijos" loading="lazy"></div>
     <h2>Risoto de Parmesão &amp; Gouda</h2>
-    <p>Cremoso, feito lentamente.</p>
+    <p>Arroz arbóreo cozido lentamente no caldo de legumes, com cebola, manteiga e azeite, finalizado com parmesão e queijo Gouda. Cremoso e marcante.</p>
   </section>
 
   <section class="dish reveal">
@@ -155,12 +158,12 @@
       <div>
         <div class="photo"><img src="img/cogumelos.jpg" alt="Cogumelos Paris salteados" loading="lazy"></div>
         <h2>Cogumelos Paris</h2>
-        <p>Na manteiga com salsinha.</p>
+        <p>Dourados na manteiga e no azeite, com salsinha.</p>
       </div>
       <div>
         <div class="photo"><img src="img/batatas.jpg" alt="Batatas douradas rústicas" loading="lazy"></div>
         <h2>Batatas Rústicas</h2>
-        <p>Douradas e macias.</p>
+        <p>Douradas por fora, macias por dentro, com salsinha.</p>
       </div>
     </div>
   </section>
@@ -169,7 +172,7 @@
     <div class="label">Sobremesa</div>
     <div class="photo"><img src="img/pudim.jpg" alt="Pudim de leite com calda de caramelo" loading="lazy"></div>
     <h2>Pudim de Leite</h2>
-    <p>Com calda de caramelo.</p>
+    <p>Liso e cremoso, com calda de caramelo dourada.</p>
   </section>
 
   <footer class="closing reveal">
