@@ -9,7 +9,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2314301f'/%3E%3Ctext x='50%25' y='57%25' text-anchor='middle' dominant-baseline='middle' font-family='serif' font-size='28' fill='%23c9a96a'%3EA%26amp;L%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#14301f;
@@ -19,9 +19,9 @@
     --ivory:#f3eee2;
     --ivory-dim:#c3cdbf;
     --muted:#8fa395;
-    --serif:'Cormorant Garamond', Georgia, serif;
-    --script:'Great Vibes', cursive;
-    --sans:'Jost', system-ui, sans-serif;
+    --serif:'Libre Caslon Text', Georgia, serif;
+    --display:'Libre Caslon Display', Georgia, serif;
+    --sans:'Libre Caslon Text', Georgia, serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -45,16 +45,16 @@
   }
   .crest{width:46px;height:30px;color:var(--gold);margin-bottom:28px}
   .cover .over{
-    font-family:var(--sans);font-weight:300;font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--ivory-dim);
+    font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--ivory-dim);
     padding-left:.5em;
   }
   .cover h1{
-    font-family:var(--script);font-weight:400;font-size:clamp(66px,19vw,92px);line-height:1;color:var(--ivory);
+    font-family:var(--display);font-weight:400;font-size:clamp(58px,17vw,80px);letter-spacing:.02em;line-height:1;color:var(--ivory);
     margin-top:6px;
   }
   .rule{width:42px;height:1px;background:var(--gold);margin:34px auto}
-  .couple{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--gold)}
-  .date{font-family:var(--sans);font-weight:300;font-size:11px;letter-spacing:.4em;color:var(--muted);margin-top:10px;padding-left:.4em}
+  .couple{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--gold)}
+  .date{font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:.4em;color:var(--muted);margin-top:10px;padding-left:.4em}
   .reserved{margin-top:34px;font-style:italic;font-size:19px;line-height:1.45;color:var(--ivory-dim)}
   .reserved b{font-style:normal;font-weight:500;color:var(--ivory)}
   .hint{
@@ -79,22 +79,22 @@
   .photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
   .in .photo img{transform:scale(1)}
   .dish h2{
-    font-family:var(--serif);font-weight:500;font-size:clamp(28px,8vw,32px);line-height:1.15;color:var(--ivory);margin-top:30px;
+    font-family:var(--display);font-weight:400;font-size:clamp(27px,7.8vw,30px);line-height:1.15;color:var(--ivory);margin-top:30px;
   }
-  .dish p{font-size:18px;font-style:italic;color:var(--ivory-dim);margin-top:8px;line-height:1.45}
+  .dish p{font-size:16px;color:var(--ivory-dim);margin-top:10px;line-height:1.6}
 
   .dish p.pairing{font-family:var(--sans);font-style:normal;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:18px}
   .dish p{max-width:360px;margin-left:auto;margin-right:auto}
   /* guarnições lado a lado */
   .pair{display:grid;grid-template-columns:1fr 1fr;gap:22px}
   .pair .photo{width:100%;box-shadow:0 0 0 1px var(--gold-line), 0 0 0 6px var(--bg), 0 0 0 7px var(--gold-line), 0 24px 40px -20px rgba(0,0,0,.85)}
-  .pair h2{font-size:22px;margin-top:24px}
-  .pair p{font-size:16px}
+  .pair h2{font-size:21px;margin-top:24px}
+  .pair p{font-size:14.5px}
 
   /* fecho */
   .closing{text-align:center;padding:44px 0 30px;border-top:1px solid var(--gold-line)}
   .closing .q{font-style:italic;font-size:19px;color:var(--ivory-dim)}
-  .closing .sign{font-family:var(--script);font-size:44px;color:var(--gold);line-height:1;margin-top:16px}
+  .closing .sign{font-family:var(--serif);font-style:italic;font-size:30px;color:var(--gold);line-height:1;margin-top:16px}
   .credits{font-family:var(--sans);font-size:9px;letter-spacing:.06em;color:#5d7a68;text-align:center;padding:26px 0 calc(24px + env(safe-area-inset-bottom))}
 
   /* animações */
