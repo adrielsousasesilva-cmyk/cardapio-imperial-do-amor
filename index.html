@@ -79,17 +79,30 @@
   .photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
   .in .photo img{transform:scale(1)}
   .dish h2{
-    font-family:var(--serif);font-weight:500;font-size:clamp(28px,8vw,32px);line-height:1.15;color:var(--ivory);margin-top:30px;
+    font-family:var(--serif);font-weight:500;font-size:clamp(27px,7.6vw,31px);line-height:1.18;color:var(--ivory);
+    margin:30px auto 0;max-width:380px;
   }
-  .dish p{font-size:18px;font-style:italic;color:var(--ivory-dim);margin-top:8px;line-height:1.45}
+  .dish p{font-size:17.5px;font-style:italic;color:var(--ivory-dim);margin:14px auto 0;line-height:1.55;max-width:380px}
+  .ingr{margin:22px auto 0;max-width:340px}
+  .ingr span{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);padding-left:.4em}
+  .ingr div{font-size:16px;color:var(--ivory-dim);margin-top:6px;line-height:1.5}
 
-  .dish p.pairing{font-family:var(--sans);font-style:normal;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:18px}
-  .dish p{max-width:360px;margin-left:auto;margin-right:auto}
-  /* guarnições lado a lado */
-  .pair{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  .pair .photo{width:100%;box-shadow:0 0 0 1px var(--gold-line), 0 0 0 6px var(--bg), 0 0 0 7px var(--gold-line), 0 24px 40px -20px rgba(0,0,0,.85)}
-  .pair h2{font-size:22px;margin-top:24px}
-  .pair p{font-size:16px}
+  /* prato principal: fotos agrupadas */
+  .cluster{position:relative;width:min(340px,86vw);aspect-ratio:1/1.02;margin:0 auto}
+  .cluster .photo{position:absolute;width:auto}
+  .cluster .main{width:64%;left:18%;top:0;z-index:1}
+  .cluster .s1{width:40%;left:0;top:57%;z-index:2}
+  .cluster .s2{width:30%;left:35%;top:70%;z-index:3}
+  .cluster .s3{width:40%;right:0;top:57%;z-index:2}
+  .cluster .s1,.cluster .s2,.cluster .s3{
+    box-shadow:0 0 0 1px var(--gold-line), 0 0 0 6px var(--bg), 0 0 0 7px var(--gold-line), 0 18px 34px -16px rgba(0,0,0,.9);
+  }
+  .legend{font-family:var(--sans);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:26px}
+  .legend b{font-weight:400;color:var(--gold)}
+  .part{margin-top:40px}
+  .part h3{font-family:var(--serif);font-style:italic;font-weight:400;font-size:24px;color:var(--gold)}
+  .part h3::before,.part h3::after{content:"";display:inline-block;width:18px;height:1px;background:var(--gold-line);vertical-align:middle;margin:0 12px}
+  .part p{margin-top:10px}
 
   /* fecho */
   .closing{text-align:center;padding:44px 0 30px;border-top:1px solid var(--gold-line)}
@@ -133,38 +146,39 @@
   <section class="dish reveal">
     <div class="label">Entrada</div>
     <div class="photo"><img src="img/bruschetta.jpg" alt="Bruschetta tostada com muçarela derretida"></div>
-    <h2>Bruschetta de Calabresa</h2>
-    <p>Fatias de baguete tostadas no azeite, cobertas com calabresa douradinha e muçarela derretida, finalizadas com orégano.</p>
+    <h2>Bruschetta de Calabresa com Muçarela</h2>
+    <p>Fatias de baguete artesanal tostadas na frigideira com azeite extravirgem, até ficarem levemente crocantes e douradas. Por cima, calabresa em pequenos cubos dourada na própria gordura, coberta com muçarela derretida e finalizada com orégano: crocância, sabor defumado e cremosidade em uma só mordida.</p>
+    <div class="ingr"><span>Ingredientes</span><div>Baguete, azeite extravirgem, linguiça calabresa, muçarela e orégano.</div></div>
   </section>
 
   <section class="dish reveal">
     <div class="label">Prato principal</div>
-    <div class="photo"><img src="img/lombo.jpg" alt="Lombo suíno dourado e fatiado" loading="lazy"></div>
-    <h2>Lombo Suíno</h2>
-    <p>Lombo suíno temperado, selado na manteiga e no azeite até ficar douradinho por fora e suculento por dentro, finalizado com salsinha fresca.</p>
-    <p class="pairing">Servido com risoto de parmesão &amp; Gouda</p>
-  </section>
+    <div class="cluster">
+      <div class="photo main"><img src="img/lombo.jpg" alt="Lombo suíno dourado e fatiado" loading="lazy"></div>
+      <div class="photo s1"><img src="img/risoto.jpg" alt="Risoto cremoso de parmesão e Gouda" loading="lazy"></div>
+      <div class="photo s2"><img src="img/cogumelos.jpg" alt="Cogumelos Paris dourados" loading="lazy"></div>
+      <div class="photo s3"><img src="img/batatas.jpg" alt="Batatas douradas rústicas" loading="lazy"></div>
+    </div>
+    <div class="legend"><b>Lombo</b> · Risoto · Cogumelos · Batatas</div>
+    <h2>Lombo Suíno Dourado com Risoto Cremoso de Parmesão &amp; Gouda</h2>
+    <p>A suculência do lombo dourado na frigideira encontra a cremosidade de um risoto de inspiração italiana, feito com arroz arbóreo, caldo de legumes, cebola, manteiga, azeite extravirgem e dois queijos de personalidade distinta.</p>
 
-  <section class="dish reveal">
-    <div class="label">Acompanhamento</div>
-    <div class="photo"><img src="img/risoto.jpg" alt="Risoto cremoso de queijos" loading="lazy"></div>
-    <h2>Risoto de Parmesão &amp; Gouda</h2>
-    <p>Arroz arbóreo cozido lentamente no caldo de legumes, com cebola, manteiga e azeite, finalizado com parmesão e queijo Gouda. Cremoso e marcante.</p>
-  </section>
+    <div class="part">
+      <h3>O lombo</h3>
+      <p>Lombo suíno temperado, preparado na frigideira com manteiga e um fio de azeite até dourar por fora e ficar suculento por dentro. Descansa brevemente antes de servir, para preservar seus sucos e sua textura. Finalizado com salsinha fresca.</p>
+      <div class="ingr"><span>Ingredientes</span><div>Lombo suíno temperado, manteiga, azeite extravirgem e salsinha.</div></div>
+    </div>
 
-  <section class="dish reveal">
-    <div class="label">Guarnições</div>
-    <div class="pair">
-      <div>
-        <div class="photo"><img src="img/cogumelos.jpg" alt="Cogumelos Paris salteados" loading="lazy"></div>
-        <h2>Cogumelos Paris</h2>
-        <p>Dourados na manteiga e no azeite, com salsinha.</p>
-      </div>
-      <div>
-        <div class="photo"><img src="img/batatas.jpg" alt="Batatas douradas rústicas" loading="lazy"></div>
-        <h2>Batatas Rústicas</h2>
-        <p>Douradas por fora, macias por dentro, com salsinha.</p>
-      </div>
+    <div class="part">
+      <h3>O risoto</h3>
+      <p>O arroz arbóreo é envolvido em cebola refogada no azeite e na manteiga e recebe o caldo de legumes quente aos poucos, sendo mexido até liberar o amido e ficar cremoso, com os grãos macios mas firmes no centro.</p>
+      <p>Finalizado com parmesão, de sabor intenso e levemente salgado, e Gouda, que traz suavidade e notas amanteigadas. Por cima, cogumelos Paris frescos dourados na manteiga e no azeite, com salsinha para dar aroma e frescor.</p>
+      <div class="ingr"><span>Ingredientes</span><div>Arroz arbóreo, caldo de legumes com ervas, cebola, manteiga, azeite extravirgem, parmesão, Gouda, cogumelos Paris e salsinha.</div></div>
+    </div>
+
+    <div class="part">
+      <h3>As batatas</h3>
+      <p>Batatas rústicas cortadas em pedaços, douradas por fora e macias por dentro, com um toque de salsinha.</p>
     </div>
   </section>
 
@@ -172,7 +186,8 @@
     <div class="label">Sobremesa</div>
     <div class="photo"><img src="img/pudim.jpg" alt="Pudim de leite com calda de caramelo" loading="lazy"></div>
     <h2>Pudim de Leite</h2>
-    <p>Liso e cremoso, com calda de caramelo dourada.</p>
+    <p>O clássico que nunca sai de moda: liso, cremoso e delicado, assado lentamente em banho-maria e coberto por uma calda de caramelo dourada. O final mais doce da noite.</p>
+    <div class="ingr"><span>Ingredientes</span><div>Leite condensado, leite, ovos e açúcar caramelizado.</div></div>
   </section>
 
   <footer class="closing reveal">
