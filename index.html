@@ -5,23 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Imperial do Amor</title>
 <meta name="description" content="Cardápio do jantar de Adriel & Louise — 19 de outubro de 2026">
-<meta name="theme-color" content="#1a0a0e">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-size='52'%3E%E2%9D%A4%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#14301f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2314301f'/%3E%3Ctext x='50%25' y='57%25' text-anchor='middle' dominant-baseline='middle' font-family='serif' font-size='28' fill='%23c9a96a'%3EA%26amp;L%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#140709;
-    --bg-2:#1f0b10;
-    --wine:#5a1424;
-    --wine-soft:#3a0d18;
-    --gold:#d4af6a;
-    --gold-soft:#b8955a;
-    --gold-line:rgba(212,175,106,.35);
-    --ivory:#f6ecdc;
-    --ivory-dim:#cdbfa9;
-    --muted:#9c8b78;
+    --bg:#14301f;
+    --bg-2:#1b3d2a;
+    --gold:#c9a96a;
+    --gold-line:rgba(201,169,106,.3);
+    --ivory:#f3eee2;
+    --ivory-dim:#c3cdbf;
+    --muted:#8fa395;
     --serif:'Cormorant Garamond', Georgia, serif;
     --script:'Great Vibes', cursive;
     --sans:'Jost', system-ui, sans-serif;
@@ -30,6 +27,8 @@
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{
     background:var(--bg);
+    background-image:radial-gradient(110% 55% at 50% 0%, #24543a 0%, transparent 65%);
+    background-repeat:no-repeat;
     color:var(--ivory);
     font-family:var(--serif);
     line-height:1.5;
@@ -37,404 +36,154 @@
     -webkit-font-smoothing:antialiased;
   }
   img{display:block;max-width:100%}
+  main{max-width:480px;margin:0 auto;padding:0 24px}
 
-  /* ---------- textura e brilho de fundo ---------- */
-  body::before{
-    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-    background:
-      radial-gradient(120% 60% at 50% -10%, rgba(122,26,48,.55), transparent 60%),
-      radial-gradient(80% 50% at 50% 110%, rgba(90,20,36,.45), transparent 70%);
-  }
-  main{position:relative;z-index:1;max-width:560px;margin:0 auto}
-
-  /* ---------- capa ---------- */
+  /* capa */
   .cover{
-    min-height:100svh;
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    text-align:center;padding:48px 24px 72px;position:relative;
+    min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:40px 0 80px;position:relative;
   }
-  .frame{
-    position:absolute;inset:16px;border:1px solid var(--gold-line);pointer-events:none;
+  .crest{width:46px;height:30px;color:var(--gold);margin-bottom:28px}
+  .cover .over{
+    font-family:var(--sans);font-weight:300;font-size:11px;letter-spacing:.5em;text-transform:uppercase;color:var(--ivory-dim);
+    padding-left:.5em;
   }
-  .frame::before{content:"";position:absolute;inset:6px;border:1px solid rgba(212,175,106,.15)}
-  .corner{position:absolute;width:34px;height:34px;color:var(--gold)}
-  .corner.tl{top:8px;left:8px}
-  .corner.tr{top:8px;right:8px;transform:scaleX(-1)}
-  .corner.bl{bottom:8px;left:8px;transform:scaleY(-1)}
-  .corner.br{bottom:8px;right:8px;transform:scale(-1,-1)}
-
-  .eyebrow{
-    font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:.42em;
-    text-transform:uppercase;color:var(--gold);
-  }
-  .crest{width:74px;height:74px;margin:26px auto 18px;color:var(--gold)}
   .cover h1{
-    font-family:var(--serif);font-weight:500;font-size:clamp(40px,11vw,58px);
-    line-height:1;letter-spacing:.06em;text-transform:uppercase;
-    background:linear-gradient(180deg,#f3dca6 0%,#d4af6a 50%,#a8803f 100%);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
+    font-family:var(--script);font-weight:400;font-size:clamp(66px,19vw,92px);line-height:1;color:var(--ivory);
+    margin-top:6px;
   }
-  .cover h1 small{
-    display:block;font-size:.36em;letter-spacing:.5em;margin:14px 0 10px;
-    font-weight:400;color:var(--ivory-dim);-webkit-text-fill-color:var(--ivory-dim);
+  .rule{width:42px;height:1px;background:var(--gold);margin:34px auto}
+  .couple{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--gold)}
+  .date{font-family:var(--sans);font-weight:300;font-size:11px;letter-spacing:.4em;color:var(--muted);margin-top:10px;padding-left:.4em}
+  .hint{
+    position:absolute;bottom:30px;left:50%;margin-left:-.5px;
+    width:1px;height:40px;background:linear-gradient(var(--gold),transparent);
+    animation:drip 2.4s ease-in-out infinite;
   }
-  .cover .amor{
-    font-family:var(--script);font-size:clamp(54px,15vw,78px);line-height:.9;color:var(--ivory);
-    text-transform:none;letter-spacing:0;display:block;margin-top:2px;
-    -webkit-text-fill-color:var(--ivory);
-    text-shadow:0 0 30px rgba(212,175,106,.25);
-  }
-  .divider{display:flex;align-items:center;gap:12px;justify-content:center;margin:28px auto;color:var(--gold);width:min(240px,70%)}
-  .divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent)}
-  .divider svg{width:16px;height:16px;flex:none}
-  .couple{font-family:var(--script);font-size:clamp(40px,11vw,52px);color:var(--gold);line-height:1.1}
-  .date{font-family:var(--sans);font-weight:300;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory-dim);margin-top:10px}
-  .reserved{
-    margin-top:30px;font-style:italic;font-size:19px;color:var(--ivory-dim);max-width:300px;
-  }
-  .reserved b{font-style:normal;font-weight:600;color:var(--ivory)}
-  .scroll-hint{
-    position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
-    font-family:var(--sans);font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);
-    display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;
-  }
-  .scroll-hint span{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);animation:drip 2.2s ease-in-out infinite}
   @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-  /* ---------- seções ---------- */
-  .intro{text-align:center;padding:24px 28px 8px}
-  .intro p{font-size:21px;font-style:italic;color:var(--ivory-dim);line-height:1.45}
-  .intro p em{color:var(--gold);font-style:italic}
-
-  .course{padding:56px 0 8px}
-  .course-head{text-align:center;padding:0 24px;margin-bottom:26px}
-  .num{
-    font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold);letter-spacing:.1em;
+  /* pratos */
+  .dish{padding:48px 0;text-align:center}
+  .dish + .dish{border-top:1px solid var(--gold-line)}
+  .label{
+    font-family:var(--sans);font-weight:400;font-size:10.5px;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);
+    padding-left:.45em;margin-bottom:24px;
   }
-  .course-head h2{
-    font-family:var(--sans);font-weight:400;font-size:12px;letter-spacing:.48em;text-transform:uppercase;
-    color:var(--ivory-dim);margin-top:6px;
-  }
-  .course-head h2::after{
-    content:"";display:block;width:36px;height:1px;background:var(--gold);margin:16px auto 0;
-  }
-
-  .dish{margin:0 16px 34px}
   .photo{
-    position:relative;overflow:hidden;border-radius:4px;aspect-ratio:4/5;
-    box-shadow:0 30px 60px -20px rgba(0,0,0,.8), 0 0 0 1px var(--gold-line);
+    aspect-ratio:1/1;border-radius:50%;overflow:hidden;width:min(300px,78vw);margin:0 auto;
+    box-shadow:0 0 0 1px var(--gold-line), 0 0 0 9px var(--bg), 0 0 0 10px var(--gold-line), 0 30px 60px -24px rgba(0,0,0,.85);
     background:var(--bg-2);
   }
-  .photo.wide{aspect-ratio:4/3}
-  .photo img{
-    width:100%;height:100%;object-fit:cover;
-    transform:scale(1.12);transition:transform 2.6s cubic-bezier(.2,.7,.2,1), filter 1.6s;
-    filter:saturate(1.08) contrast(1.04) brightness(.96);
+  .photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
+  .in .photo img{transform:scale(1)}
+  .dish h2{
+    font-family:var(--serif);font-weight:500;font-size:clamp(28px,8vw,32px);line-height:1.15;color:var(--ivory);margin-top:30px;
   }
-  .in .photo img{transform:scale(1.02)}
-  .photo::after{
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(180deg,transparent 55%,rgba(20,7,9,.55) 100%);
-  }
-  .tag{
-    position:absolute;left:14px;bottom:14px;z-index:2;
-    font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory);
-    padding:7px 12px;border:1px solid rgba(246,236,220,.4);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
-    background:rgba(20,7,9,.35);border-radius:2px;
-  }
-  .dish-body{text-align:center;padding:26px 10px 0}
-  .dish h3{
-    font-family:var(--serif);font-weight:500;font-size:clamp(28px,7.6vw,34px);line-height:1.12;color:var(--ivory);
-  }
-  .dish h3 i{display:block;font-weight:400;font-size:.66em;color:var(--gold);margin-top:6px}
-  .dish p{
-    font-size:19px;line-height:1.55;color:var(--ivory-dim);margin:14px auto 0;max-width:420px;
-  }
-  .notes{
-    display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px;
-  }
-  .notes span{
-    font-family:var(--sans);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
-    border:1px solid var(--gold-line);padding:6px 11px;border-radius:30px;
-  }
+  .dish p{font-size:18px;font-style:italic;color:var(--ivory-dim);margin-top:8px;line-height:1.45}
 
-  /* prato montado (mosaico) */
-  .plate{margin:6px 16px 0}
-  .plate-label{text-align:center;margin-bottom:18px}
-  .plate-label .script{font-family:var(--script);font-size:40px;color:var(--gold);line-height:1}
-  .plate-label p{font-size:18px;font-style:italic;color:var(--ivory-dim);margin-top:4px}
-  .mosaic{
-    display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:6px;
-    aspect-ratio:1/1;border-radius:4px;overflow:hidden;
-    box-shadow:0 30px 60px -20px rgba(0,0,0,.8), 0 0 0 1px var(--gold-line);
-  }
-  .mosaic figure{position:relative;overflow:hidden;background:var(--bg-2)}
-  .mosaic figure:first-child{grid-row:1 / 4}
-  .mosaic img{width:100%;height:100%;object-fit:cover;filter:saturate(1.08) contrast(1.04)}
-  .mosaic figcaption{
-    position:absolute;left:0;right:0;bottom:0;padding:22px 10px 8px;
-    font-family:var(--sans);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory);
-    background:linear-gradient(transparent,rgba(20,7,9,.8));
-  }
-
-  .and{
-    text-align:center;font-family:var(--script);font-size:34px;color:var(--gold);margin:-6px 0 22px;
-  }
-
-  /* sobremesa (surpresa) */
-  .surprise{
-    margin:0 16px;padding:46px 26px;text-align:center;border-radius:4px;position:relative;overflow:hidden;
-    background:
-      radial-gradient(90% 70% at 50% 0%, rgba(212,175,106,.16), transparent 70%),
-      linear-gradient(160deg,var(--wine) 0%,var(--wine-soft) 100%);
-    box-shadow:0 0 0 1px var(--gold-line), 0 30px 60px -20px rgba(0,0,0,.8);
-  }
-  .surprise svg{width:44px;height:44px;color:var(--gold);margin:0 auto 14px}
-  .surprise h3{font-family:var(--script);font-weight:400;font-size:46px;color:var(--ivory);line-height:1}
-  .surprise p{font-size:19px;font-style:italic;color:var(--ivory-dim);margin-top:12px}
+  /* guarnições lado a lado */
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .pair .photo{width:100%;box-shadow:0 0 0 1px var(--gold-line), 0 0 0 6px var(--bg), 0 0 0 7px var(--gold-line), 0 24px 40px -20px rgba(0,0,0,.85)}
+  .pair h2{font-size:22px;margin-top:24px}
+  .pair p{font-size:16px}
 
   /* fecho */
-  .closing{text-align:center;padding:72px 28px 40px}
-  .closing .quote{font-size:23px;font-style:italic;line-height:1.45;color:var(--ivory);max-width:380px;margin:0 auto}
-  .closing .sign{font-family:var(--script);font-size:46px;color:var(--gold);margin-top:22px;line-height:1}
-  .closing .heart{width:22px;height:22px;color:var(--wine);margin:28px auto 0;filter:drop-shadow(0 0 8px rgba(212,175,106,.35))}
-  .closing .heart path{fill:var(--gold)}
-  .credits{
-    font-family:var(--sans);font-size:9.5px;letter-spacing:.04em;color:#6c5d50;text-align:center;
-    padding:24px 24px calc(28px + env(safe-area-inset-bottom));line-height:1.6;
-  }
+  .closing{text-align:center;padding:44px 0 30px;border-top:1px solid var(--gold-line)}
+  .closing .q{font-style:italic;font-size:19px;color:var(--ivory-dim)}
+  .closing .sign{font-family:var(--script);font-size:44px;color:var(--gold);line-height:1;margin-top:16px}
+  .credits{font-family:var(--sans);font-size:9px;letter-spacing:.06em;color:#5d7a68;text-align:center;padding:26px 0 calc(24px + env(safe-area-inset-bottom))}
 
-  /* revelar ao rolar */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity 1.1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1)}
+  /* animações */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease, transform 1s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-  .cover > *:not(.frame):not(.scroll-hint){animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
-  .cover > *:nth-child(3){animation-delay:.15s}
-  .cover > *:nth-child(4){animation-delay:.3s}
-  .cover > *:nth-child(5){animation-delay:.5s}
+  .cover > *:not(.hint){animation:rise 1.3s cubic-bezier(.2,.7,.2,1) both}
+  .cover > *:nth-child(2){animation-delay:.12s}
+  .cover > *:nth-child(3){animation-delay:.24s}
+  .cover > *:nth-child(4){animation-delay:.4s}
+  .cover > *:nth-child(5){animation-delay:.55s}
   .cover > *:nth-child(6){animation-delay:.7s}
-  .cover > *:nth-child(7){animation-delay:.85s}
-  .cover > *:nth-child(8){animation-delay:1s}
-  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-
-  /* pétalas */
-  .petal{
-    position:fixed;top:-30px;z-index:3;pointer-events:none;width:14px;height:12px;
-    background:radial-gradient(circle at 30% 30%,#b8344f,#6e1428);border-radius:80% 0 80% 0;opacity:.75;
-    animation:fall linear forwards;
-  }
-  @keyframes fall{
-    to{transform:translate(var(--dx),110vh) rotate(var(--rot));opacity:0}
-  }
-
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){
     .reveal,.photo img,.cover > *{transition:none!important;animation:none!important;opacity:1!important;transform:none!important}
-    .petal{display:none}
-  }
-  @media (min-width:600px){
-    .dish,.plate,.surprise{margin-left:0;margin-right:0}
   }
 </style>
 </head>
 <body>
 <main>
 
-  <!-- CAPA -->
   <header class="cover">
-    <div class="frame" aria-hidden="true">
-      <svg class="corner tl" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 33V12C1 6 6 1 12 1h21"/><path d="M6 33V14c0-4.5 3.5-8 8-8h19" opacity=".5"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
-      <svg class="corner tr" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 33V12C1 6 6 1 12 1h21"/><path d="M6 33V14c0-4.5 3.5-8 8-8h19" opacity=".5"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
-      <svg class="corner bl" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 33V12C1 6 6 1 12 1h21"/><path d="M6 33V14c0-4.5 3.5-8 8-8h19" opacity=".5"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
-      <svg class="corner br" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 33V12C1 6 6 1 12 1h21"/><path d="M6 33V14c0-4.5 3.5-8 8-8h19" opacity=".5"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
-    </div>
-
-    <div class="eyebrow">Bem-vinda ao</div>
-
-    <!-- brasão: coroa + iniciais -->
-    <svg class="crest" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
-      <path d="M22 26 L26 12 L33 21 L40 8 L47 21 L54 12 L58 26 Z" stroke-linejoin="round"/>
-      <circle cx="26" cy="11" r="1.6" fill="currentColor" stroke="none"/>
-      <circle cx="40" cy="7" r="1.8" fill="currentColor" stroke="none"/>
-      <circle cx="54" cy="11" r="1.6" fill="currentColor" stroke="none"/>
-      <path d="M22 29h36" />
-      <circle cx="40" cy="52" r="20" opacity=".55"/>
-      <text x="40" y="60" text-anchor="middle" font-family="Great Vibes, cursive" font-size="22" fill="currentColor" stroke="none">A&amp;L</text>
+    <svg class="crest" viewBox="0 0 46 30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true">
+      <path d="M5 24 L3 7 L13 15 L23 3 L33 15 L43 7 L41 24 Z"/>
+      <path d="M5 28h36"/>
     </svg>
-
-    <h1>Restaurante<small>Imperial do</small><span class="amor">Amor</span></h1>
-
-    <div class="divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg></div>
-
+    <div class="over">Restaurante Imperial do</div>
+    <h1>Amor</h1>
+    <div class="rule"></div>
     <div class="couple">Adriel &amp; Louise</div>
-    <div class="date">19 · outubro · 2026</div>
-
-    <p class="reserved">Mesa reservada para <b>Louise</b>,<br>a convidada mais especial da noite.</p>
-
-    <a class="scroll-hint" href="#menu">Menu<span></span></a>
+    <div class="date">19 · 10 · 2026</div>
+    <div class="hint" aria-hidden="true"></div>
   </header>
 
-  <section class="intro reveal" id="menu">
-    <p>Esta noite, cada prato foi pensado <em>para você</em>.<br>Sente-se, respire fundo e aproveite.</p>
+  <section class="dish reveal">
+    <div class="label">Entrada</div>
+    <div class="photo"><img src="img/bruschetta.jpg" alt="Bruschetta tostada com muçarela derretida"></div>
+    <h2>Bruschetta de Calabresa</h2>
+    <p>Calabresa douradinha, muçarela derretida e orégano.</p>
   </section>
 
-  <!-- 1. ENTRADA -->
-  <section class="course">
-    <div class="course-head reveal">
-      <div class="num">I</div>
-      <h2>Entrada</h2>
-    </div>
-    <article class="dish reveal">
-      <div class="photo">
-        <img src="img/bruschetta.jpg" alt="Bruschetta tostada com queijo derretido" loading="lazy">
-        <span class="tag">Para abrir o apetite</span>
-      </div>
-      <div class="dish-body">
-        <h3>Bruschetta de Calabresa<i>com muçarela</i></h3>
-        <p>Fatias de baguete tostadas com azeite, cobertas com calabresa douradinha em pequenos pedaços e muçarela derretida, finalizadas com orégano.</p>
-        <div class="notes"><span>Baguete tostada</span><span>Calabresa</span><span>Muçarela</span><span>Orégano</span></div>
-      </div>
-    </article>
+  <section class="dish reveal">
+    <div class="label">Prato principal</div>
+    <div class="photo"><img src="img/lombo.jpg" alt="Lombo suíno dourado e fatiado" loading="lazy"></div>
+    <h2>Lombo Suíno</h2>
+    <p>Dourado na frigideira, suculento por dentro.</p>
   </section>
 
-  <!-- 2. PRATO PRINCIPAL -->
-  <section class="course">
-    <div class="course-head reveal">
-      <div class="num">II</div>
-      <h2>Prato Principal</h2>
-    </div>
-    <article class="dish reveal">
-      <div class="photo">
-        <img src="img/lombo.jpg" alt="Lombo suíno dourado e fatiado" loading="lazy">
-        <span class="tag">A estrela da noite</span>
-      </div>
-      <div class="dish-body">
-        <h3>Lombo Suíno<i>dourado na frigideira</i></h3>
-        <p>Lombo suíno já temperado, preparado até ficar douradinho por fora e suculento por dentro.</p>
-        <div class="notes"><span>Dourado por fora</span><span>Suculento por dentro</span></div>
-      </div>
-    </article>
+  <section class="dish reveal">
+    <div class="label">Acompanhamento</div>
+    <div class="photo"><img src="img/risoto.jpg" alt="Risoto cremoso de queijos" loading="lazy"></div>
+    <h2>Risoto de Parmesão &amp; Gouda</h2>
+    <p>Cremoso, feito lentamente.</p>
   </section>
 
-  <!-- 3. ACOMPANHAMENTO PRINCIPAL -->
-  <section class="course">
-    <div class="course-head reveal">
-      <div class="num">III</div>
-      <h2>Acompanhamento</h2>
-    </div>
-    <article class="dish reveal">
-      <div class="photo">
-        <img src="img/risoto.jpg" alt="Risoto cremoso de queijos finalizado com parmesão" loading="lazy">
-        <span class="tag">Cremoso &amp; marcante</span>
+  <section class="dish reveal">
+    <div class="label">Guarnições</div>
+    <div class="pair">
+      <div>
+        <div class="photo"><img src="img/cogumelos.jpg" alt="Cogumelos Paris salteados" loading="lazy"></div>
+        <h2>Cogumelos Paris</h2>
+        <p>Na manteiga com salsinha.</p>
       </div>
-      <div class="dish-body">
-        <h3>Risoto de Parmesão<i>&amp; Gouda</i></h3>
-        <p>Arroz arbóreo preparado lentamente com caldo de legumes, cebola, manteiga e azeite, finalizado com parmesão e queijo Gouda para uma textura cremosa e um sabor marcante.</p>
-        <div class="notes"><span>Arbóreo</span><span>Parmesão</span><span>Gouda</span><span>Manteiga</span></div>
-      </div>
-    </article>
-  </section>
-
-  <!-- 4. GUARNIÇÕES -->
-  <section class="course">
-    <div class="course-head reveal">
-      <div class="num">IV</div>
-      <h2>Guarnições</h2>
-    </div>
-    <article class="dish reveal">
-      <div class="photo wide">
-        <img src="img/cogumelos.jpg" alt="Cogumelos Paris dourados na manteiga com salsinha" loading="lazy">
-        <span class="tag">Na manteiga</span>
-      </div>
-      <div class="dish-body">
-        <h3>Cogumelos Paris<i>salteados</i></h3>
-        <p>Cogumelos frescos dourados na frigideira com manteiga e azeite, finalizados com salsinha.</p>
-      </div>
-    </article>
-    <div class="and reveal">e</div>
-    <article class="dish reveal">
-      <div class="photo wide">
-        <img src="img/batatas.jpg" alt="Batatas douradas rústicas com salsinha" loading="lazy">
-        <span class="tag">Crocantes por fora</span>
-      </div>
-      <div class="dish-body">
-        <h3>Batatas Douradas<i>rústicas</i></h3>
-        <p>Batatas cortadas em pedaços, macias por dentro e douradas por fora, com um toque de salsinha.</p>
-      </div>
-    </article>
-  </section>
-
-  <!-- PRATO MONTADO -->
-  <section class="course">
-    <div class="plate reveal">
-      <div class="plate-label">
-        <div class="script">O prato completo</div>
-        <p>Tudo junto, do jeito que chega à mesa.</p>
-      </div>
-      <div class="mosaic">
-        <figure><img src="img/lombo.jpg" alt="" loading="lazy"><figcaption>Lombo suíno</figcaption></figure>
-        <figure><img src="img/risoto.jpg" alt="" loading="lazy"><figcaption>Risoto</figcaption></figure>
-        <figure><img src="img/cogumelos.jpg" alt="" loading="lazy"><figcaption>Cogumelos</figcaption></figure>
-        <figure><img src="img/batatas.jpg" alt="" loading="lazy"><figcaption>Batatas</figcaption></figure>
+      <div>
+        <div class="photo"><img src="img/batatas.jpg" alt="Batatas douradas rústicas" loading="lazy"></div>
+        <h2>Batatas Rústicas</h2>
+        <p>Douradas e macias.</p>
       </div>
     </div>
   </section>
 
-  <!-- 5. SOBREMESA -->
-  <section class="course">
-    <div class="course-head reveal">
-      <div class="num">V</div>
-      <h2>Sobremesa</h2>
-    </div>
-    <article class="dish reveal">
-      <div class="photo wide">
-        <img src="img/pudim.jpg" alt="Pudim de leite com calda de caramelo" loading="lazy">
-        <span class="tag">O final mais doce</span>
-      </div>
-      <div class="dish-body">
-        <h3>Pudim de Leite<i>com calda de caramelo</i></h3>
-        <p>Liso, cremoso e delicado, coberto por uma calda de caramelo dourada — porque uma noite assim merece terminar com doçura.</p>
-        <div class="notes"><span>Leite condensado</span><span>Calda de caramelo</span></div>
-      </div>
-    </article>
+  <section class="dish reveal">
+    <div class="label">Sobremesa</div>
+    <div class="photo"><img src="img/pudim.jpg" alt="Pudim de leite com calda de caramelo" loading="lazy"></div>
+    <h2>Pudim de Leite</h2>
+    <p>Com calda de caramelo.</p>
   </section>
 
-  <!-- FECHO -->
   <footer class="closing reveal">
-    <p class="quote">“De todos os lugares do mundo, o meu favorito é qualquer mesa onde você esteja.”</p>
+    <p class="q">Cada prato, feito para você.</p>
     <div class="sign">Adriel</div>
-    <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.7 1.2 5.3 3.1 1.6-1.9 3.1-3.1 5.3-3.1 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>
   </footer>
 
-  <p class="credits">Fotos ilustrativas: Unsplash.</p>
+  <p class="credits">Fotos ilustrativas · Unsplash</p>
 </main>
 
 <script>
-  // revela as seções ao rolar
   (function(){
     var els = document.querySelectorAll('.reveal');
     if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, {threshold:.18});
+    }, {threshold:.15});
     els.forEach(function(e){ io.observe(e); });
-  })();
-
-  // chuva suave de pétalas na abertura
-  (function(){
-    if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var n = 0;
-    var t = setInterval(function(){
-      if(++n > 22){ clearInterval(t); return; }
-      var p = document.createElement('div');
-      p.className = 'petal';
-      p.style.left = (Math.random()*100) + 'vw';
-      p.style.setProperty('--dx', (Math.random()*120 - 60) + 'px');
-      p.style.setProperty('--rot', (Math.random()*540 - 270) + 'deg');
-      var s = .6 + Math.random()*.8;
-      p.style.width = (14*s)+'px'; p.style.height = (12*s)+'px';
-      p.style.animationDuration = (6 + Math.random()*5) + 's';
-      document.body.appendChild(p);
-      setTimeout(function(){ p.remove(); }, 12000);
-    }, 260);
   })();
 </script>
 </body>
